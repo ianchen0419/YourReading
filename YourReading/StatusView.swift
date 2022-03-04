@@ -29,10 +29,6 @@ struct StatusView: View {
                 .listRowBackground(Color.clear)
                 
                 Section("\(selectedStatus)清單") {
-//                    FilteredList(filterKey: "isReadEnd", filterValue: isReadEnd) { (book: Book) in
-//
-//                    }
-                    
                     ForEach(readingList) { book in
                         HStack(spacing: 10) {
                             Group {

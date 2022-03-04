@@ -32,15 +32,6 @@ struct AddCategoryView: View {
                         }
                     }
                 }
-                
-//                Section {
-//                    NavigationLink {
-//                        SelectBookView(books: books, categoryTitle: categoryTitle)
-//                    } label: {
-//                        Text("選擇要加入的書籍")
-//                    }
-//                }
-//                .disabled(categoryTitle.isEmpty)
             }
             .navigationTitle("新增書單")
             .navigationBarTitleDisplayMode(.inline)
