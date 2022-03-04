@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Author" representedClassName="Author" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="book" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Book" inverseName="author" inverseEntity="Book"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Book" representedClassName="Book" syncable="YES">
+        <attribute name="detail" optional="YES" attributeType="String"/>
+        <attribute name="endRead" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isbn_13" optional="YES" attributeType="String"/>
+        <attribute name="isReadEnd" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="publishedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="startRead" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="thumbnail" optional="YES" attributeType="URI"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="author" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Author" inverseName="book" inverseEntity="Author"/>
+        <relationship name="category" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" inverseName="book" inverseEntity="Category"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="isbn_13"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Category" representedClassName="Category" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="book" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Book" inverseName="category" inverseEntity="Book"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="Author" positionX="27" positionY="81" width="128" height="59"/>
+        <element name="Book" positionX="-36" positionY="9" width="128" height="179"/>
+        <element name="Category" positionX="0" positionY="45" width="128" height="74"/>
+    </elements>
+</model>
