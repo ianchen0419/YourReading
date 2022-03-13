@@ -47,6 +47,7 @@
 		8D02129627CD0533004C82DA /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		8D02129827CD053E004C82DA /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		8D02129A27CD1325004C82DA /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
+		8D4865B327DE2D7E0052D63D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D6B6AAF27CE673A002A7CF7 /* CategoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetail.swift; sourceTree = "<group>"; };
 		8D6CDA3A27C3014500F3F9E1 /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 		8D6CDA3C27C303BF00F3F9E1 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		8DF8963627C272C7005AAF76 /* YourReading */ = {
 			isa = PBXGroup;
 			children = (
+				8D4865B327DE2D7E0052D63D /* Info.plist */,
 				8D02128427CA76BA004C82DA /* Book+CoreDataClass.swift */,
 				8D02128527CA76BA004C82DA /* Book+CoreDataProperties.swift */,
 				8D02128627CA76BA004C82DA /* Category+CoreDataClass.swift */,
@@ -164,10 +166,11 @@
 			};
 			buildConfigurationList = 8DF8962F27C272C6005AAF76 /* Build configuration list for PBXProject "YourReading" */;
 			compatibilityVersion = "Xcode 13.0";
-			developmentRegion = en;
+			developmentRegion = "zh-Hant";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hant",
 				Base,
 			);
 			mainGroup = 8DF8962B27C272C6005AAF76;
@@ -354,6 +357,7 @@
 				DEVELOPMENT_TEAM = VXMCZJQ3C9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YourReading/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -383,6 +387,7 @@
 				DEVELOPMENT_TEAM = VXMCZJQ3C9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YourReading/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
