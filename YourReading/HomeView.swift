@@ -25,12 +25,20 @@ struct HomeView: View {
                             } label: {
                                 AsyncImage(url: book.wrappedThumbnail) { phase in
                                     if let image = phase.image {
-                                        image
-                                            .resizable()
-                                            .scaledToFit()
-                                            .shadow(color: Color.black.opacity(0.2), radius: 0.5, x: 0, y: 1.5)
-                                            .shadow(color: Color.black.opacity(0.14), radius: 1, x: 0, y: 1)
-                                            .shadow(color: Color.black.opacity(0.12), radius: 2.5, x: 0, y: 0.5)
+                                        ZStack {
+                                            image
+                                                .resizable()
+                                                .scaledToFit()
+                                                .shadow(color: Color.black.opacity(0.2), radius: 0.5, x: 0, y: 1.5)
+                                                .shadow(color: Color.black.opacity(0.14), radius: 1, x: 0, y: 1)
+                                                .shadow(color: Color.black.opacity(0.12), radius: 2.5, x: 0, y: 0.5)
+                                            
+                                            Text(book.titleText)
+                                                .opacity(0) // a11y
+                                        }
+                                            
+                                            
+
                                     } else if phase.error != nil {
                                         Text("圖片載入失敗")
                                     } else {
@@ -38,7 +46,6 @@ struct HomeView: View {
                                     }
                                 }
                                 .frame(minHeight: 100)
-
                             }
                         }
                         
@@ -55,6 +62,7 @@ struct HomeView: View {
                         }
                         .foregroundColor(.secondary)
                         .frame(maxWidth: .infinity, minHeight: proxy.size.width * 0.4)
+                        .contentShape(Rectangle())
                         .overlay(RoundedRectangle(cornerRadius: 6).stroke(.secondary, style: StrokeStyle(lineWidth: 1.5, dash: [6])))
                     }
                     .padding()

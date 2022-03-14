@@ -18,6 +18,9 @@ struct ListRowView: View {
             Text(content ?? "-")
                 .foregroundColor(.secondary)
         }
+        .accessibilityElement()
+        .accessibilityLabel(title)
+        .accessibilityHint(content ?? "無")
     }
 }
 

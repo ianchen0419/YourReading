@@ -38,6 +38,8 @@ struct BookDetailView: View {
                                 }
                             }
                         }
+                        .contentShape(Rectangle())
+                        .accessibilityLabel("封面")
                         
                         Spacer()
                     }
@@ -64,7 +66,7 @@ struct BookDetailView: View {
             .listStyle(.insetGrouped)
             .navigationTitle(book.titleText)
             .navigationBarTitleDisplayMode(.inline)
-            .alert("提示", isPresented: $showDeleteAlert) {
+            .alert("刪除書籍", isPresented: $showDeleteAlert) {
                 Button("刪除", role: .destructive) {
                     moc.delete(book)
                     if moc.hasChanges {
@@ -73,7 +75,7 @@ struct BookDetailView: View {
                 }
                 Button("取消", role: .cancel) { }
             } message: {
-                Text("確定刪除這本書嗎？")
+                Text("確定刪除「\(book.titleText)」嗎？")
             }
         }
     }

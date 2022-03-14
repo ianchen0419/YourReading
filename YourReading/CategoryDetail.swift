@@ -68,7 +68,7 @@ struct CategoryDetail: View {
                 }
             }
         }
-        .alert("提示", isPresented: $showDeleteAlert) {
+        .alert("刪除書單", isPresented: $showDeleteAlert) {
             Button("刪除", role: .destructive, action: deleteCategory)
             Button("取消", role: .cancel, action: { })
         } message: {

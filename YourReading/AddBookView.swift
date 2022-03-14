@@ -64,19 +64,24 @@ struct AddBookView: View {
             } else {
                 VStack {
                     Image(systemName: "barcode")
-                            .foregroundColor(.secondary)
-                            .font(.system(size: 100))
-                            .navigationTitle("新增書籍")
-                            .navigationBarTitleDisplayMode(.inline)
+                        .foregroundColor(.secondary)
+                        .font(.system(size: 100))
+                        .navigationTitle("新增書籍")
+                        .navigationBarTitleDisplayMode(.inline)
+                        .toolbar {
+                            Button("關閉") { dismiss() }
+                        }
                     Text("加入書籍開始記錄閱讀狀態")
                         .foregroundColor(.secondary)
                         .padding(.top)
                 }
+                .accessibilityElement()
+                .accessibilityLabel("加入書籍開始記錄閱讀狀態")
             }
             
         }
         .searchable(text: $text, prompt: "請輸入 ISBN 13 碼") {
-            
+
         }
         .onChange(of: text) {
             let param = $0
@@ -85,6 +90,7 @@ struct AddBookView: View {
             }
         }
         .keyboardType(.numberPad)
+        
         
     }
     

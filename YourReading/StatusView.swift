@@ -59,8 +59,10 @@ struct StatusView: View {
                         .swipeActions {
 //                            if book.isReadEnd != true {
                             if selectedStatus != "已閱讀" {
-                                Button(swipeButtonText) {
+                                Button {
                                     markBookStatus(book)
+                                } label: {
+                                    Text(swipeButtonText)
                                 }
                                 .tint(.orange)
                             }
