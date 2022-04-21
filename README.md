@@ -18,6 +18,9 @@
 |9784560088821 	|フランス語で日本案内 |
 |9784344037441	|星ひとみの天星術    |
 
-## Prototype
-https://ianchen0419.github.io/YourReading-F7/    
-Made with Framework7
+## Highlight
+* Using Google Book API to search book by ISBN number.
+* Using `AsyncImage` to access remote image.
+* Using many-to-many relations to combined entities of Core Data.
+* Using `EditMode` to handle customize List edit/delete appearance. [see more of my blog](https://zenn.dev/ianchen0419/articles/6a986226bbe905)
+* [Prototype site](https://ianchen0419.github.io/YourReading-F7/ ) which is made with Framework7
